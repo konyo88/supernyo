@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NYOANDFRIENDS — BE WITH ΔS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#FFB6A0;
+      --black:#000000;
+      --white:#ffffff;
+      --button-radius:999px;
+    }
+    /* Animated gradient background */
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #000000 0%, #0a0a0a 40%, #000000 70%);
+      overflow-y:auto;
+    }
+    .bg {
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      background: linear-gradient(120deg, #000000 0%, #0b0b0b 30%, var(--pink) 100%);
+      background-size: 300% 300%;
+      animation: gradientShift 12s ease infinite;
+      filter: saturate(0.95);
+    }
+    @keyframes gradientShift{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+
+    /* Centered container */
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+      box-sizing:border-box;
+    }
+    .card{
+      width:100%;
+      max-width:520px;
+      text-align:center;
+      color:var(--white);
+      padding:36px;
+      box-sizing:border-box;
+      backdrop-filter: blur(6px);
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+      animation: fadeUp 0.8s ease both;
+    }
+    @keyframes fadeUp{
+      from{opacity:0; transform: translateY(8px);}
+      to{opacity:1; transform: translateY(0);}
+    }
+
+    /* Logo placeholder */
+    .logo{
+      width:120px;
+      height:120px;
+      margin:0 auto 18px;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(255,255,255,0.03);
+      border:1px dashed rgba(255,255,255,0.06);
+      color:var(--white);
+      font-weight:700;
+      font-size:14px;
+    }
+    .title{
+      font-size:28px;
+      letter-spacing:2px;
+      margin:6px 0 6px;
+      font-weight:800;
+    }
+    .tag{
+      color:var(--pink);
+      font-size:14px;
+      letter-spacing:1px;
+      margin-bottom:18px;
+      font-weight:600;
+    }
+
+    /* Buttons list */
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:6px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-decoration:none;
+      padding:14px 18px;
+      background:var(--white);
+      color:var(--black);
+      border-radius:var(--button-radius);
+      font-weight:600;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+      border: none;
+      font-size:16px;
+    }
+    .btn:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(255,182,160,0.18);
+      background: linear-gradient(90deg, var(--white) 0%, var(--pink) 100%);
+      color:var(--black);
+    }
+    .btn:active{ transform: translateY(-1px); }
+
+    /* Small note / footer */
+    .foot{
+      margin-top:22px;
+      font-size:12px;
+      color:rgba(255,255,255,0.7);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width:480px){
+      .card{ padding:28px; border-radius:14px; }
+      .title{ font-size:24px; }
+      .logo{ width:92px; height:92px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section class="card" role="main" aria-labelledby="site-title">
+      <!-- Logo placeholder: replace this image or block with your own logo -->
+      <div class="logo" id="logo">LOGO</div>
+
+      <h1 id="site-title" class="title">NYOANDFRIENDS</h1>
+      <div class="tag">BE WITH ΔS</div>
+
+      <nav class="links" aria-label="Primary links">
+        <a class="btn" href="https://youtube.com/@nyoandfriends" target="_blank" rel="noopener noreferrer">🎮 YouTube</a>
+        <a class="btn" href="https://instagram.com/nyoandfriends" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+        <a class="btn" href="https://tiktok.com/@nyoandfriends" target="_blank" rel="noopener noreferrer">🎬 TikTok</a>
+        <a class="btn" href="https://open.spotify.com/artist/nyoandfriends" target="_blank" rel="noopener noreferrer">🎧 Spotify</a>
+        <a class="btn" href="https://nyoandfriends.store" target="_blank" rel="noopener noreferrer">🛍️ Store</a>
+        <a class="btn" href="https://discord.gg/nyoandfriends" target="_blank" rel="noopener noreferrer">💬 Discord</a>
+      </nav>
+
+      <div class="foot">© 2025 NYOANDFRIENDS | Made with ❤️ by NyoTeam</div>
+    </section>
+  </main>
+
+</body>
+</html>
